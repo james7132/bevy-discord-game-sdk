@@ -1,0 +1,23 @@
+[package]
+name = "bevy-discord-game-sdk"
+version = "0.1.0"
+authors = ["james7132 <contact@jamessliu.com>"]
+edition = "2018"
+description = "A Bevy plugin for integrating with the Discord Game SDK."
+repository = "https://github.com/james7132/bevy-discord-game-sdk"
+license = "MIT"
+keywords = ["bevy", "gamedev", "discord"]
+
+[package.metadata.docs.rs]
+features = [ "docs-only" ]
+
+[features]
+default = []
+# Skip looking for the Discord sdk for docs builds
+docs-only = ["steamworks/docs-only"]
+
+[dependencies]
+bevy_log = "0.5"
+bevy_app = "0.5"
+bevy_ecs = "0.5"
+discord-game-sdk = "1.0"
